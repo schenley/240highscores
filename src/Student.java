@@ -16,6 +16,11 @@ public class Student extends JButton {
         uav = c;
         setUname(n);
         uscore = d;
+        
+        ImageIcon img = new ImageIcon("images/" + uav + ".png");
+        setIcon(img);
+        setBorder(null);
+        setContentAreaFilled(false);
     }
 
     public Student() {

@@ -7,14 +7,13 @@ import javax.swing.*;
 
 public class Game extends myJPanel implements KeyListener, ActionListener {
 
-    Student st1, st2, st3, st4, saved1, saved2, saved3;
+    Student st1, saved1, saved2, saved3;
     Scores scores;
     JLabel jl1, gtlabel, gttotalset, gtscore;
     int x = 100;
     int y = 100;
     int gtmax;
-    int instanceCounter = 0;
-    static int counter = 0;
+
     XML_240 xe;
     String tod;
     myJTabbedPane mjtp;
@@ -75,10 +74,6 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
         jl1.setText(st1.getInfo());
         jl1.setForeground(Color.blue);
 
-        ImageIcon img = new ImageIcon("images/" + st1.uav + ".png");
-        st1.setIcon(img);
-        st1.setBorder(null);
-        st1.setContentAreaFilled(false);
         setFocusable(true);
         addKeyListener(this);
         
@@ -287,46 +282,6 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
 
     
     }
-
-//public void calcHighScores()
-//    {
-//
-////        saved1 = new Student("","","","",0);
-////        saved2 = new Student("","","","",0);
-////        saved3 = new Student("","","","",0);
-//   
-//         xe.openReaderXML("xml/scores.xml");
-//         saved1 = (Student)xe.ReadObject();
-//         saved2 = (Student)xe.ReadObject();
-//         saved3 = (Student)xe.ReadObject();
-//         xe.closeReaderXML();
-//         
-//       if (st1.uscore > saved1.uscore)  
-//       {
-//           saved3 = saved2; 
-//           saved2 = saved1; 
-//           saved1 = st1;
-//       }
-//       else if (st1.uscore > saved2.uscore)
-//       {
-//           saved3 = saved2;
-//           saved2 = st1;  
-//       }
-//       else if(st1.uscore > saved3.uscore)
-//       {
-//           saved3 = st1;
-//       }
-//       
-//        xe.openWriterXML("xml/scores.xml");
-//        xe.writeObject(saved1);
-//        xe.writeObject(saved2);
-//        xe.writeObject(saved3);
-//        xe.closeWriterXML(); 
-//        
-//        scores.sjl1.setText(saved1.getScore());
-//        scores.sjl2.setText(saved2.getScore());
-//        scores.sjl3.setText(saved3.getScore());
-//    }
 }
 
 
