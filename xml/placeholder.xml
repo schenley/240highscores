@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<java version="1.8.0_25" class="java.beans.XMLDecoder">
+ <string>Jeff</string>
+ <int>22</int>
+=======
+<java version="1.7.0_21" class="java.beans.XMLDecoder">
+ <string>Chrissy</string>
+ <int>23</int>
+>>>>>>> ce245604745eb1be13a14e2f26f4823304cb5e4d
+</java>

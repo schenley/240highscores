@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0_21" class="java.beans.XMLDecoder">
+    <string>Before you play, you will select your game difficulty, length of play, and avatar.</string>
+    <string>Your mission is to guide your Penn State student through his or her days and nights.</string>
+    <string>You will use your keyboard's arrow keys to move the student around on the game screen.</string>
+    <string>Help your student make good choices, and you will earn points.</string>
+    <string>But beware the time will change from day to night, and you will have to make the appropriate choices!</string>
+    <string>Study Java and eat during the day, and be sure to get plenty of sleep at night.</string>
+    <string>For extra credit, have your student participate in THON, all day and all night!</string>
+</java>
