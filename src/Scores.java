@@ -5,13 +5,15 @@ import java.awt.event.*;
 public class Scores extends myJPanel {
 
  
-    GButton2 title;
+    GButton2 jbtitle;
     JButton score1, score2, score3;
    // JButton scoreE1, scoreE2, scoreE3, scoreM1, scoreM2, scoreM3, scoreH1, scoreH2, scoreH3;
     Student mostRecent, saved1, saved2, saved3;
     XML_240 xe;
 
     public Scores(Student passed) {
+        jbtitle = new GButton2("scorestitle");
+        add(jbtitle);
         xe = new XML_240();
         
 //-----code to initialize XML values--------

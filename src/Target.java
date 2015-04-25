@@ -129,6 +129,49 @@ int points;
                 break;
         }
         return name;
+    }
+    
+        public ImageIcon GetPic(String time)
+    {
+        ImageIcon image = new ImageIcon("images/day.png");
+        double r = Math.random();
+        int random = (int)(r*3);
+
+        if (time == "day")
+        {
+         switch (random) 
+         {
+            case 0:
+                image = new ImageIcon("images/day.png");
+                break;
+            case 1:
+                image = new ImageIcon("images/day2.png");
+                break;
+            case 2:
+                image = new ImageIcon("images/day3.png");
+                break;
         }
+        }
+        else if (time == "night")
+        {
+         switch (random) {
+            case 0:
+                image = new ImageIcon("images/night.png");
+                break;
+            case 1:
+                image = new ImageIcon("images/night2.png");
+                break;
+            case 2:
+                image = new ImageIcon("images/night3.png");
+                break;
+        }
+        }
+        else if (time == "grad")
+        {
+            image = new ImageIcon("images/gameover.png");
+        }
+               
+        return image;
+    }
             
     }

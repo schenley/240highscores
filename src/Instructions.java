@@ -15,14 +15,16 @@ public class Instructions extends myJPanel {
     private String instructionsLineItemSeven;
     JLabel jl;
     XML_240 xe;
-
+    GButton2 jbtitle;
+    
     public Instructions() {
         super();
+        jbtitle = new GButton2("insttitle");
+        add(jbtitle);
         xe = new XML_240();
-        setLayout(new BorderLayout());
+        
         setBackground(Color.white);
-        jl = new JLabel("Game Instructions:");
-        add(jl, "North");
+
         readFromXmlFile();
         JLabel jl = new JLabel();
 

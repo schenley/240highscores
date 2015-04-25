@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Game extends myJPanel implements KeyListener, ActionListener {
 
-    Student st1, saved1, saved2, saved3;
+    Student st1;
     Scores scores;
     JLabel jl1, gtlabel, gttotalset, gtscore;
     int x = 100;
@@ -18,25 +18,19 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
     String tod;
     myJTabbedPane mjtp;
     
-    ImageIcon sourceImage1 = new ImageIcon("images/day.png");
-    Image daypic = sourceImage1.getImage();
-    ImageIcon sourceImage2 = new ImageIcon("images/night.png");
-    Image nightpic = sourceImage2.getImage();
-    ImageIcon sourceImage3 = new ImageIcon("images/gameover.png");
-    Image gradpic = sourceImage3.getImage();
-
     Target mt1;
-    Target[] t;
+    Target[] t;   
+    
+    ImageIcon sourceImage1, sourceImage2, sourceImage3;
+    Image daypic, nightpic, gradpic;
 
     Timer intervalTime, mover, gtcounter; 
     
     int delay = 1000, gtdelay = 1000;
     int interval = 0, gcinterval = 0, points = 0;
 
-    Boolean[] boolt;
-            
+    Boolean[] boolt;     
     Boolean boolmt1 = false, playStopped = false;
-
 
     
     public Game(Student passed, Scores passedScores) {
@@ -53,6 +47,16 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
         setBackground(Color.white);
         
         tod = "day";
+        
+        mt1 = new Target("thon", tod);        
+        add(mt1);
+        
+        sourceImage1 = mt1.GetPic("day");
+        daypic = sourceImage1.getImage();
+        sourceImage2 = mt1.GetPic("night");
+        nightpic = sourceImage2.getImage();
+        sourceImage3 = mt1.GetPic("grad");
+        gradpic = sourceImage3.getImage();
 
         gttotalset = new JLabel("   ");  //gt stands for game timer, this will show game time option
         gttotalset.setBounds(420, 10, 250, 20);  //this will position gttotalset on the screen
@@ -77,8 +81,7 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
         setFocusable(true);
         addKeyListener(this);
         
-        mt1 = new Target("thon", tod);        
-        add(mt1);
+
         
         t = new Target[12]; 
         boolt = new Boolean[12];
@@ -175,11 +178,9 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
     }
 
 
-    public void keyReleased(KeyEvent evt) {
-    }
+    public void keyReleased(KeyEvent evt) { }
 
-    public void keyTyped(KeyEvent evt) {
-    }
+    public void keyTyped(KeyEvent evt) { }
 
     //============================================================================
     @Override
@@ -191,6 +192,7 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
             {
                 remove(t[i]);
             }
+            
             remove(mt1);
 
             if (getBackground()== Color.white) {

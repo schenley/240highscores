@@ -7,6 +7,7 @@ public class Credits extends myJPanel {
 
     JLabel jl1, jl2;
     XML_240 xe;
+    GButton2 jbtitle;
 
     private String programmerOneName;
     private String programmerOneTitle;
@@ -18,19 +19,20 @@ public class Credits extends myJPanel {
 
     public Credits() {
         super();
-
+        
         xe = new XML_240();
-
-        setLayout(new BorderLayout());
+        jbtitle = new GButton2("creditstitle");
+        add(jbtitle);
+   
         setBackground(Color.white);
         jl1 = new JLabel("IST 240 Team2 members:");
-        add(jl1, "North");
+        add(jl1);
         jl2 = new JLabel();
         //jl2.setBorder(BorderFactory.createTitledBorder("Team Members"));
 
         readFromXmlFile();
         jl2.setText("<html><body><ul><li>" + getProgrammerOneTitle() + " : " + getProgrammerOneName() + "</li><li>" + getProgrammerTwoTitle() + " : " + getProgrammerTwoName() + "</li><li>" + getProgrammerThreeTitle() + " : " + getProgrammerThreeName() + "</li></ul></html></body>");
-        add(jl2, "Center");
+        add(jl2);
 
     }
 
