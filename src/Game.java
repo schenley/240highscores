@@ -249,7 +249,7 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
                 repaint();
                 playStopped = true;
                 
-                scores.calcHighScores(st1);
+               scores.calcHighScores(st1);
 
                 // Other code to stop the rest of the game and abort all functions
 

@@ -4,15 +4,8 @@ import java.awt.*;
 
 public class Instructions extends myJPanel {
 
-    private static String INSTRUCTIONS_XML_FILE_DIR = "xml/instructions.xml";
-    private String instructions;
-    private String instructionsLineItemOne;
-    private String instructionsLineItemTwo;
-    private String instructionsLineItemThree;
-    private String instructionsLineItemFour;
-    private String instructionsLineItemFive;
-    private String instructionsLineItemSix;
-    private String instructionsLineItemSeven;
+    private String instructions, instructionsLineItemOne, instructionsLineItemTwo, instructionsLineItemThree,
+            instructionsLineItemFour, instructionsLineItemFive, instructionsLineItemSix, instructionsLineItemSeven;
     JLabel jl;
     XML_240 xe;
     GButton2 jbtitle;
@@ -37,8 +30,8 @@ public class Instructions extends myJPanel {
 
     }
 
-    public void readFromXmlFile() {
-        xe.openReaderXML(INSTRUCTIONS_XML_FILE_DIR);
+     public void readFromXmlFile() {
+        xe.openReaderXML("xml/instructions.xml");
         setInstructionsLineItemOne((String) xe.ReadObject());
         setInstructionsLineItemTwo((String) xe.ReadObject());
         setInstructionsLineItemThree((String) xe.ReadObject());
