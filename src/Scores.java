@@ -4,7 +4,7 @@ import javax.swing.*;
 public class Scores extends myJPanel {
 
     GButton2 jbtitle;
-    JButton score[];
+    JLabel score[];
     Student mostRecent;
     XML_240 xe;
     Student saved[];
@@ -13,7 +13,7 @@ public class Scores extends myJPanel {
         jbtitle = new GButton2("scorestitle");
         add(jbtitle);
         xe = new XML_240();
-        score = new JButton[9];
+        score = new JLabel[9];
         saved = new Student[9];
         
 //-----code to initialize XML values--------
@@ -44,9 +44,8 @@ public class Scores extends myJPanel {
         xe.openReaderXML("xml/scores.xml");
         for (int i = 0; i<9; i++)
         {
-            score[i] = new JButton();
+            score[i] = new JLabel();
             add(score[i]);
-            score[i].setBackground(Color.white);
             saved[i] = (Student)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
         }
