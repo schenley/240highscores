@@ -17,7 +17,8 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
     String udiff, ulength, uav, uname;
     Integer uscore;
     Boolean gametabopen = false;
-
+    ImageIcon tabH, tabI,tabC, tabS, TabO;
+    
     public myJTabbedPane() {
         setBackground(Color.white);
         home = new Home();
@@ -25,7 +26,13 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         credits = new Credits();
         scores = new Scores(st1);
         options = new Options();
+        
+      //  tabH = new ImageIcon("images/tabhome.png");
+      //  tabI = new ImageIcon("images/tabinst.png");
+        
 
+       // addTab("", tabH, home);
+      //  addTab("", tabI, inst);
         addTab("Home", home);
         addTab("Instructions", inst);
         addTab("Credits", credits);

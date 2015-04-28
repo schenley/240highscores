@@ -11,7 +11,7 @@ public class Home extends myJPanel
         setLayout(null);
         jb1 = new GButton("start");
         add(jb1);
-        jb1.setBounds(225,400, 250, 100);  
+        jb1.setBounds(225, 400, 250, 100);  
         
     }
  
