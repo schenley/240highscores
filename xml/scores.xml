@@ -177,11 +177,11 @@
   </void>
   <void property="icon">
    <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
+    <string>images/mascot.png</string>
    </object>
   </void>
   <void property="uav">
-   <string>paw</string>
+   <string>mascot</string>
   </void>
   <void property="udiff">
    <string>Hard</string>
@@ -205,11 +205,11 @@
   </void>
   <void property="icon">
    <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
+    <string>images/mascot.png</string>
    </object>
   </void>
   <void property="uav">
-   <string>paw</string>
+   <string>mascot</string>
   </void>
   <void property="udiff">
    <string>Hard</string>
@@ -233,11 +233,11 @@
   </void>
   <void property="icon">
    <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
+    <string>images/mascot.png</string>
    </object>
   </void>
   <void property="uav">
-   <string>paw</string>
+   <string>mascot</string>
   </void>
   <void property="udiff">
    <string>Hard</string>

@@ -8,12 +8,13 @@ public class Scores extends myJPanel {
     Student mostRecent;
     XML_240 xe;
     Student saved[];
-
+    JButton avatar[];
     public Scores(Student passed) {
    
         xe = new XML_240();
         score = new JLabel[9];
         saved = new Student[9];
+        avatar = new JButton[9];
         play = new GButton("play");
         setLayout(null);
         mostRecent = passed;
@@ -34,7 +35,7 @@ public class Scores extends myJPanel {
 //        }
 //            for (int i = 6; i<9; i++)
 //        {
-//            saved[i] = new Student("Hard", "1 minute", "paw", "Bryce Jordan", 10);
+//            saved[i] = new Student("Hard", "1 minute", "mascot", "Bryce Jordan", 10);
 //            xe.writeObject(saved[i]); 
 //        }
 //        xe.closeWriterXML(); 
@@ -51,10 +52,13 @@ public class Scores extends myJPanel {
             add(score[i]);
             saved[i] = (Student)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
+            add(saved[i]);
+            
         }
         xe.closeReaderXML(); 
         
         play.setBounds(new Rectangle(400, 500, 200, 100));
+        
         score[0].setBounds(new Rectangle(40, 205, 175, 50));
         score[1].setBounds(new Rectangle(40, 315, 175, 50));
         score[2].setBounds(new Rectangle(40, 425, 175, 50));
@@ -64,6 +68,16 @@ public class Scores extends myJPanel {
         score[6].setBounds(new Rectangle(470, 205, 175, 50));
         score[7].setBounds(new Rectangle(470, 315, 175, 50));
         score[8].setBounds(new Rectangle(470, 425, 175, 50));
+        
+        saved[0].setBounds(new Rectangle(75, 150, 50, 50));
+        saved[1].setBounds(new Rectangle(75, 260, 50, 50));
+        saved[2].setBounds(new Rectangle(75, 370, 50, 50));
+        saved[3].setBounds(new Rectangle(290, 150, 50, 50));
+        saved[4].setBounds(new Rectangle(290, 260, 50, 50));
+        saved[5].setBounds(new Rectangle(290, 370, 50, 50));
+        saved[6].setBounds(new Rectangle(505, 150, 50, 50));
+        saved[7].setBounds(new Rectangle(505, 260, 50, 50));
+        saved[8].setBounds(new Rectangle(505, 370, 50, 50));
     }
     
     @Override
