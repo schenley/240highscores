@@ -4,7 +4,6 @@ import javax.swing.*;
 public class Home extends myJPanel  
 {
     GButton jb1;
- //   ImageIcon button, buttonP;
     
     public Home () 
     {
@@ -15,6 +14,7 @@ public class Home extends myJPanel
         
     }
  
+    @Override
    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         requestFocusInWindow();

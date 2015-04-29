@@ -27,12 +27,6 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         scores = new Scores(st1);
         options = new Options();
         
-      //  tabH = new ImageIcon("images/tabhome.png");
-      //  tabI = new ImageIcon("images/tabinst.png");
-        
-
-       // addTab("", tabH, home);
-      //  addTab("", tabI, inst);
         addTab("Home", home);
         addTab("Instructions", inst);
         addTab("Credits", credits);
@@ -41,8 +35,7 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         
         options.jb1.addActionListener(this);
         home.jb1.addActionListener(this);
-
-
+        scores.play.addActionListener(this);
     }
 
     @Override
@@ -88,13 +81,15 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         if (obj == home.jb1) {
             setSelectedIndex(4);
         }
+        if (obj == scores.play){
+            setSelectedIndex(4);
+        }
+        
     }
 
 public void panelSwitcher(int panel){
     int number = panel;
     setSelectedIndex(number);
-    
-
 }
 
 }

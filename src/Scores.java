@@ -1,8 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class Scores extends myJPanel {
-  
+public class Scores extends myJPanel
+{
     GButton play;
     JLabel score[];
     Student mostRecent;
@@ -58,7 +58,7 @@ public class Scores extends myJPanel {
         xe.closeReaderXML(); 
         
         play.setBounds(new Rectangle(400, 500, 200, 100));
-        
+         
         score[0].setBounds(new Rectangle(40, 205, 175, 50));
         score[1].setBounds(new Rectangle(40, 315, 175, 50));
         score[2].setBounds(new Rectangle(40, 425, 175, 50));
@@ -157,8 +157,6 @@ public class Scores extends myJPanel {
             xe.writeObject(saved[i]);
            score[i].setText(saved[i].getScore());
         }
-        xe.closeWriterXML(); 
-       
+        xe.closeWriterXML();    
     }
-   
 }
