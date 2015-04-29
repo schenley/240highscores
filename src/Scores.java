@@ -2,22 +2,25 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Scores extends myJPanel {
-
-    GButton2 jbtitle;
+  
+    GButton play;
     JLabel score[];
     Student mostRecent;
     XML_240 xe;
     Student saved[];
 
     public Scores(Student passed) {
-        jbtitle = new GButton2("scorestitle");
-        add(jbtitle);
+   
         xe = new XML_240();
         score = new JLabel[9];
         saved = new Student[9];
+        play = new GButton("play");
+        setLayout(null);
+        mostRecent = passed;
+        add(play);
         
 //-----code to initialize XML values--------
-        
+//        
 //        xe.openWriterXML("xml/scores.xml");
 //            for (int i = 0; i<3; i++)
 //        {
@@ -37,8 +40,8 @@ public class Scores extends myJPanel {
 //        xe.closeWriterXML(); 
         //------end of code to initialize XML file
         
-        setBackground(Color.white);
-      
+       setLayout(null);
+       
         mostRecent = passed;
  
         xe.openReaderXML("xml/scores.xml");
@@ -49,8 +52,28 @@ public class Scores extends myJPanel {
             saved[i] = (Student)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
         }
-        xe.closeReaderXML();   
+        xe.closeReaderXML(); 
+        
+        play.setBounds(new Rectangle(400, 500, 200, 100));
+        score[0].setBounds(new Rectangle(40, 205, 175, 50));
+        score[1].setBounds(new Rectangle(40, 315, 175, 50));
+        score[2].setBounds(new Rectangle(40, 425, 175, 50));
+        score[3].setBounds(new Rectangle(255, 205, 175, 50));
+        score[4].setBounds(new Rectangle(255, 315, 175, 50));
+        score[5].setBounds(new Rectangle(255, 425, 175, 50));
+        score[6].setBounds(new Rectangle(470, 205, 175, 50));
+        score[7].setBounds(new Rectangle(470, 315, 175, 50));
+        score[8].setBounds(new Rectangle(470, 425, 175, 50));
     }
+    
+    @Override
+        public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        requestFocusInWindow();
+        Image start = Toolkit.getDefaultToolkit().getImage("images/high.png");
+        g.drawImage(start, 0, 0, this);
+   }
+    
 
     public void calcHighScores(Student passed)
     {
