@@ -97,18 +97,6 @@ public class XML_240 {
             xx.printStackTrace();
         }
     }
-
-    public Integer ReadArrayObjectSize() {
-        boolean stop = false;
-        ArrayList<Object> list = new ArrayList<Object>();
-        while (!stop) {
-            try {
-                list.add(de.readObject());
-            } catch (ArrayIndexOutOfBoundsException e) {
-                stop = true;
-            }
-        }
-        return list.size();
-    }
+   
 
 }

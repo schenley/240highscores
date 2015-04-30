@@ -24,14 +24,7 @@ public class myJFrame extends JFrame {
             public void stateChanged(ChangeEvent e) {
                 if (e.getSource() instanceof JTabbedPane) {
                     JTabbedPane pane = (JTabbedPane) e.getSource();
-                    /*
-                     if (pane.getSelectedIndex() == 2) {
-
-                     }
-                     if (pane.getSelectedIndex() == 1) {
-
-                     }
-                     */
+                    
                 }
             }
 
