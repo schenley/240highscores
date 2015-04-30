@@ -8,14 +8,14 @@ public class Scores extends myJPanel
     Student mostRecent;
     XML_240 xe;
     Student saved[];
-    GButton avatar[];
+    GButton2 avatar[];
 
     public Scores(Student passed) {
    
         xe = new XML_240();
         score = new JLabel[9];
         saved = new Student[9];
-        avatar = new GButton[9];
+        avatar = new GButton2[9];
         play = new GButton("play");
         setLayout(null);
         mostRecent = passed;
@@ -53,7 +53,7 @@ public class Scores extends myJPanel
             add(score[i]);
             saved[i] = (Student)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
-            avatar[i] = new GButton(saved[i].uav);
+            avatar[i] = new GButton2(saved[i].uav);
             add(avatar[i]);
             
         }
@@ -150,8 +150,6 @@ public class Scores extends myJPanel
         {
             xe.writeObject(saved[i]);
            score[i].setText(saved[i].getScore());
-         //  ImageIcon img = new ImageIcon("images/" + saved[i].uav + ".png");
-         //  saved[i].setIcon(img);
            avatar[i].setIcon(saved[i].getIcon());
            repaint();
         }
