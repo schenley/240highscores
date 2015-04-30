@@ -8,13 +8,14 @@ public class Scores extends myJPanel
     Student mostRecent;
     XML_240 xe;
     Student saved[];
-    JButton avatar[];
+    GButton avatar[];
+
     public Scores(Student passed) {
    
         xe = new XML_240();
         score = new JLabel[9];
         saved = new Student[9];
-        avatar = new JButton[9];
+        avatar = new GButton[9];
         play = new GButton("play");
         setLayout(null);
         mostRecent = passed;
@@ -52,7 +53,8 @@ public class Scores extends myJPanel
             add(score[i]);
             saved[i] = (Student)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
-            add(saved[i]);
+            avatar[i] = new GButton(saved[i].uav);
+            add(avatar[i]);
             
         }
         xe.closeReaderXML(); 
@@ -69,24 +71,16 @@ public class Scores extends myJPanel
         score[7].setBounds(new Rectangle(470, 315, 175, 50));
         score[8].setBounds(new Rectangle(470, 425, 175, 50));
         
-        saved[0].setBounds(new Rectangle(75, 150, 50, 50));
-        saved[1].setBounds(new Rectangle(75, 260, 50, 50));
-        saved[2].setBounds(new Rectangle(75, 370, 50, 50));
-        saved[3].setBounds(new Rectangle(290, 150, 50, 50));
-        saved[4].setBounds(new Rectangle(290, 260, 50, 50));
-        saved[5].setBounds(new Rectangle(290, 370, 50, 50));
-        saved[6].setBounds(new Rectangle(505, 150, 50, 50));
-        saved[7].setBounds(new Rectangle(505, 260, 50, 50));
-        saved[8].setBounds(new Rectangle(505, 370, 50, 50));
+        avatar[0].setBounds(new Rectangle(75, 150, 50, 50));
+        avatar[1].setBounds(new Rectangle(75, 260, 50, 50));
+        avatar[2].setBounds(new Rectangle(75, 370, 50, 50));
+        avatar[3].setBounds(new Rectangle(290, 150, 50, 50));
+        avatar[4].setBounds(new Rectangle(290, 260, 50, 50));
+        avatar[5].setBounds(new Rectangle(290, 370, 50, 50));
+        avatar[6].setBounds(new Rectangle(505, 150, 50, 50));
+        avatar[7].setBounds(new Rectangle(505, 260, 50, 50));
+        avatar[8].setBounds(new Rectangle(505, 370, 50, 50));
     }
-    
-    @Override
-        public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        requestFocusInWindow();
-        Image start = Toolkit.getDefaultToolkit().getImage("images/high.png");
-        g.drawImage(start, 0, 0, this);
-   }
     
 
     public void calcHighScores(Student passed)
@@ -141,10 +135,10 @@ public class Scores extends myJPanel
                saved[7] = saved[6]; 
                saved[6] = mostRecent;
            }
-           else if (mostRecent.uscore > saved[8].uscore)
+           else if (mostRecent.uscore > saved[7].uscore)
            {
-               saved[2] = saved[8];
-               saved[8] = mostRecent;  
+               saved[8] = saved[7];
+               saved[7] = mostRecent;  
            }
            else if(mostRecent.uscore > saved[8].uscore)
            {
@@ -156,7 +150,19 @@ public class Scores extends myJPanel
         {
             xe.writeObject(saved[i]);
            score[i].setText(saved[i].getScore());
+         //  ImageIcon img = new ImageIcon("images/" + saved[i].uav + ".png");
+         //  saved[i].setIcon(img);
+           avatar[i].setIcon(saved[i].getIcon());
+           repaint();
         }
         xe.closeWriterXML();    
     }
+        @Override
+        public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        requestFocusInWindow();
+        Image start = Toolkit.getDefaultToolkit().getImage("images/high.png");
+        g.drawImage(start, 0, 0, this);
+   }
+    
 }
