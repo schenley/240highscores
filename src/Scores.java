@@ -61,15 +61,15 @@ public class Scores extends myJPanel
         
         play.setBounds(new Rectangle(400, 500, 200, 100));
          
-        score[0].setBounds(new Rectangle(40, 205, 175, 50));
-        score[1].setBounds(new Rectangle(40, 315, 175, 50));
-        score[2].setBounds(new Rectangle(40, 425, 175, 50));
-        score[3].setBounds(new Rectangle(255, 205, 175, 50));
-        score[4].setBounds(new Rectangle(255, 315, 175, 50));
-        score[5].setBounds(new Rectangle(255, 425, 175, 50));
-        score[6].setBounds(new Rectangle(470, 205, 175, 50));
-        score[7].setBounds(new Rectangle(470, 315, 175, 50));
-        score[8].setBounds(new Rectangle(470, 425, 175, 50));
+        score[0].setBounds(new Rectangle(45, 205, 175, 50));
+        score[1].setBounds(new Rectangle(45, 315, 175, 50));
+        score[2].setBounds(new Rectangle(45, 425, 175, 50));
+        score[3].setBounds(new Rectangle(260, 205, 175, 50));
+        score[4].setBounds(new Rectangle(260, 315, 175, 50));
+        score[5].setBounds(new Rectangle(260, 425, 175, 50));
+        score[6].setBounds(new Rectangle(475, 205, 175, 50));
+        score[7].setBounds(new Rectangle(475, 315, 175, 50));
+        score[8].setBounds(new Rectangle(475, 425, 175, 50));
         
         avatar[0].setBounds(new Rectangle(75, 150, 50, 50));
         avatar[1].setBounds(new Rectangle(75, 260, 50, 50));
@@ -159,7 +159,7 @@ public class Scores extends myJPanel
         public void paintComponent(Graphics g) {
         super.paintComponent(g);
         requestFocusInWindow();
-        Image start = Toolkit.getDefaultToolkit().getImage("images/high.png");
+        Image start = Toolkit.getDefaultToolkit().getImage("images/high2.png");
         g.drawImage(start, 0, 0, this);
    }
     

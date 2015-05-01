@@ -63,7 +63,7 @@ public class Student extends JButton {
         return "Difficulty: " + udiff + ", Play Length: " + ulength + ", Avatar: " + uav;
     }
     String getScore() {
-        return uname + ": "+ uscore;
+        return uscore + "  -  "+ uname;
     }
 
     public String getUname() {

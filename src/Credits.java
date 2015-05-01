@@ -62,26 +62,26 @@ public class Credits extends myJPanel {
         "Ice cream\n" +
         "http://pabook.libraries.psu.edu/palitmap/Creamery.html\n" +
         "\n" +
-        "coffee\n" +
+        "Coffee\n" +
         "http://www.amazon.com/State-Nittany-Lions-Steel-Travel/dp/B00A3NZYWI\n" +
         "\n" +
-        "bed\n" +
+        "Bed\n" +
         "http://cliparts.co/clipart/2436222\n" +
         "\n" +
-        "football\n" +
+        "Football\n" +
         "http://www.clipartpanda.com/clipart_images/downloads-1422434\n" +
         "\n" +
-        "stadium\n" +
+        "Stadium\n" +
         "https://www.e-education.psu.edu/geosc10/l10.html\n" +
         "\n" +
-        "ramen\n" +
+        "Ramen\n" +
         "http://i.huffpost.com/gadgets/slideshows/321384/slide_321384_3015740_free.jpg\n" +
         "\n" +
-        "textbooks \n" +
+        "Textbooks \n" +
         "http://www.tgslc.org/blog/post.cfm/textbooks-challenges-and-solutions-to-unexpected-expenses\n" +
         "\n" +
         "");
-      //  add(textArea);
+
     //=====================================
         textArea.setWrapStyleWord(true);
         textArea.setLineWrap(true);
