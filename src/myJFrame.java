@@ -1,9 +1,5 @@
-
 import java.awt.*;
 import javax.swing.*;
-
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -12,7 +8,7 @@ public class myJFrame extends JFrame {
     myJTabbedPane mjp;
 
     public myJFrame() {
-        super("Our Awesome Game");
+        super("PurSUit");
         mjp = new myJTabbedPane();
 
         getContentPane().add(mjp, "Center");
@@ -23,8 +19,7 @@ public class myJFrame extends JFrame {
         mjp.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 if (e.getSource() instanceof JTabbedPane) {
-                    JTabbedPane pane = (JTabbedPane) e.getSource();
-                    
+                    JTabbedPane pane = (JTabbedPane) e.getSource();  
                 }
             }
 
