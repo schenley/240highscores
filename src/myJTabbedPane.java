@@ -35,7 +35,10 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         
         options.jb1.addActionListener(this);
         home.jb1.addActionListener(this);
+        home.jb2.addActionListener(this);
         scores.play.addActionListener(this);
+        inst.targets.addActionListener(this);
+        
     }
 
     @Override
@@ -79,6 +82,12 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
             }
         }
         if (obj == home.jb1) {
+            setSelectedIndex(4);
+        }
+        if (obj == home.jb2){
+            setSelectedIndex(1);
+        }
+        if (obj == inst.targets){
             setSelectedIndex(4);
         }
         if (obj == scores.play){

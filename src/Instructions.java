@@ -8,10 +8,12 @@ public class Instructions extends myJPanel {
             instructionsLineItemFour, instructionsLineItemFive, instructionsLineItemSix, instructionsLineItemSeven;
     JLabel jl;
     XML_240 xe;
-    GButton2 jbtitle, targets;
+    GButton2 jbtitle;
+    GButton targets;
     
     public Instructions() {
         super();
+        
         jbtitle = new GButton2("insttitle");
         add(jbtitle);
         xe = new XML_240();
@@ -27,7 +29,8 @@ public class Instructions extends myJPanel {
 
         setBackground(Color.white);
         add(jl);
-        targets = new GButton2("targetsinfo");
+        
+        targets = new GButton("targetinst");
         add(targets);
         
 
