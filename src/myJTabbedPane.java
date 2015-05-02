@@ -14,6 +14,7 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
     Game game;
     
     Student st1 = new Student();
+    Student2 st2 = new Student2();
     String udiff, ulength, uav, uname;
     Integer uscore;
     Boolean gametabopen = false;
@@ -24,7 +25,7 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
         home = new Home();
         inst = new Instructions();
         credits = new Credits();
-        scores = new Scores(st1);
+        scores = new Scores(st2);
         options = new Options();
         
         addTab("Home", home);
@@ -58,6 +59,7 @@ public class myJTabbedPane extends JTabbedPane implements ActionListener {
                 uav = options.jl3.getText();
                 uname = options.jtname.getText();
                 st1 = new Student(udiff, ulength, uav, uname, uscore);
+                st2 = new Student2(udiff, uav, uname, uscore);
                 game = new Game(st1, scores);
 
                 if (gametabopen == false) {

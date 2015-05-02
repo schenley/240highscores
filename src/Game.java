@@ -8,6 +8,7 @@ import javax.swing.*;
 public class Game extends myJPanel implements KeyListener, ActionListener {
 
     Student st1;
+    Student2 scorer;
     Scores scores;
     JLabel jl1, gtlabel, gttotalset, gtscore;
     int x = 100;
@@ -248,8 +249,8 @@ public class Game extends myJPanel implements KeyListener, ActionListener {
                 
                 repaint();
                 playStopped = true;
-                
-               scores.calcHighScores(st1);
+               scorer = new Student2(st1.udiff, st1.uav, st1.uname, st1.uscore); 
+               scores.calcHighScores(scorer);
 
                 // Other code to stop the rest of the game and abort all functions
 

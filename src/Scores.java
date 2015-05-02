@@ -5,16 +5,16 @@ public class Scores extends myJPanel
 {
     GButton play;
     JLabel score[];
-    Student mostRecent;
+    Student2 mostRecent;
     XML_240 xe;
-    Student saved[];
+    Student2 saved[];
     GButton2 avatar[];
 
-    public Scores(Student passed) {
+    public Scores(Student2 passed) {
    
         xe = new XML_240();
         score = new JLabel[9];
-        saved = new Student[9];
+        saved = new Student2[9];
         avatar = new GButton2[9];
         play = new GButton("play");
         setLayout(null);
@@ -26,21 +26,21 @@ public class Scores extends myJPanel
 //        xe.openWriterXML("xml/scores.xml");
 //            for (int i = 0; i<3; i++)
 //        {
-//            saved[i] = new Student("Easy", "1 minute", "paw", "Nittany", 10);
+//            saved[i] = new Student2("Easy", "paw", "Nittany", 10);
 //            xe.writeObject(saved[i]); 
 //        }
 //            for (int i = 3; i<6; i++)
 //        {
-//            saved[i] = new Student("Medium", "1 minute", "logo", "Old Main", 10);
+//            saved[i] = new Student2("Medium", "logo", "Old Main", 10);
 //            xe.writeObject(saved[i]);
 //        }
 //            for (int i = 6; i<9; i++)
 //        {
-//            saved[i] = new Student("Hard", "1 minute", "mascot", "Bryce Jordan", 10);
+//            saved[i] = new Student2("Hard", "mascot", "Bryce Jordan", 10);
 //            xe.writeObject(saved[i]); 
 //        }
 //        xe.closeWriterXML(); 
-        //------end of code to initialize XML file
+    //    ------end of code to initialize XML file
         
        setLayout(null);
        
@@ -51,7 +51,7 @@ public class Scores extends myJPanel
         {
             score[i] = new JLabel();
             add(score[i]);
-            saved[i] = (Student)xe.ReadObject(); 
+            saved[i] = (Student2)xe.ReadObject(); 
             score[i].setText(saved[i].getScore());
             avatar[i] = new GButton2(saved[i].uav);
             add(avatar[i]);
@@ -83,14 +83,14 @@ public class Scores extends myJPanel
     }
     
 
-    public void calcHighScores(Student passed)
+    public void calcHighScores(Student2 passed)
     {
         mostRecent = passed;
    
         xe.openReaderXML("xml/scores.xml");
         for (int i = 0; i<9; i++)
         {
-            saved[i] = (Student)xe.ReadObject();
+            saved[i] = (Student2)xe.ReadObject();
         }
         xe.closeReaderXML();
        
@@ -148,9 +148,13 @@ public class Scores extends myJPanel
         xe.openWriterXML("xml/scores.xml");
         for (int i = 0; i<9; i++)
         {
-            xe.writeObject(saved[i]);
+           xe.writeObject(saved[i]);
            score[i].setText(saved[i].getScore());
-           avatar[i].setIcon(saved[i].getIcon());
+           ImageIcon img = new ImageIcon("images/" + saved[i].uav + ".png");
+           avatar[i].setIcon(img);
+           avatar[i].setBorder(null);
+           avatar[i].setContentAreaFilled(false);
+        
            repaint();
         }
         xe.closeWriterXML();    

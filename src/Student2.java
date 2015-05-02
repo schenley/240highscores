@@ -1,29 +1,23 @@
 
 import javax.swing.*;
 
-public class Student extends JButton {
+public class Student2 extends JButton {
 
     String udiff;
-    String ulength;
     String uav;
     String uname;
     Integer uscore = 0;
 
-    public Student(String a, String b, String c, String n, Integer d) {
+    public Student2(String a, String c, String n, Integer d) {
         super();
         udiff = a;
-        ulength = b;
         uav = c;
         uname = n;
         uscore = d;
         
-        ImageIcon img = new ImageIcon("images/" + uav + ".png");
-        setIcon(img);
-        setBorder(null);
-        setContentAreaFilled(false);
     }
 
-    public Student() {
+    public Student2() {
 
     }
   
@@ -33,14 +27,7 @@ public class Student extends JButton {
 
     public void setUdiff(String udiff) {
         this.udiff = udiff;
-    }
-
-    public String getUlength() {
-        return ulength;
-    }
-
-    public void setUlength(String ulength) {
-        this.ulength = ulength;
+    
     }
 
     public String getUav() {
@@ -59,9 +46,7 @@ public class Student extends JButton {
         this.uscore = uscore;
     }
 
-    String getInfo() {
-        return "Difficulty: " + udiff + ", Play Length: " + ulength + ", Avatar: " + uav;
-    }
+
     String getScore() {
         return uscore + "  -  "+ uname;
     }
