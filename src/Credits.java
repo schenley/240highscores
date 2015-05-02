@@ -56,7 +56,7 @@ public class Credits extends myJPanel {
         "Java book\n" +
         "http://proquestcombo.safaribooksonline.com.ezaccess.libraries.psu.edu/book/programming/java/9780132841641\n" +
         "\n" +
-        "Pizza\n" +
+        "Pizza, photographs\n" +
         "by Schenley\n" +
         "\n" +
         "Ice cream\n" +
