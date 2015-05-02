@@ -1,109 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_25" class="java.beans.XMLDecoder">
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
-   </object>
-  </void>
+ <object class="Student2">
   <void property="uav">
    <string>paw</string>
   </void>
   <void property="udiff">
    <string>Easy</string>
   </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
   <void property="uname">
    <string>Nittany</string>
   </void>
   <void property="uscore">
-   <int>10</int>
+   <int>41</int>
   </void>
  </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
-   </object>
-  </void>
+ <object class="Student2">
   <void property="uav">
-   <string>paw</string>
+   <string>logo</string>
   </void>
   <void property="udiff">
    <string>Easy</string>
   </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
   <void property="uname">
-   <string>Nittany</string>
+   <string>Blue&amp;white</string>
   </void>
   <void property="uscore">
-   <int>10</int>
+   <int>27</int>
   </void>
  </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/paw.png</string>
-   </object>
-  </void>
+ <object class="Student2">
   <void property="uav">
-   <string>paw</string>
+   <string>mascot</string>
   </void>
   <void property="udiff">
    <string>Easy</string>
   </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
   <void property="uname">
-   <string>Nittany</string>
+   <string>GoState</string>
   </void>
   <void property="uscore">
-   <int>10</int>
+   <int>11</int>
   </void>
  </object>
- <object class="Student">
-  <void property="border">
-   <null/>
+ <object class="Student2">
+  <void property="uav">
+   <string>mascot</string>
   </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
+  <void property="udiff">
+   <string>Medium</string>
   </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/logo.png</string>
-   </object>
+  <void property="uname">
+   <string>Paterno</string>
   </void>
+  <void property="uscore">
+   <int>21</int>
+  </void>
+ </object>
+ <object class="Student2">
+  <void property="uav">
+   <string>paw</string>
+  </void>
+  <void property="udiff">
+   <string>Medium</string>
+  </void>
+  <void property="uname">
+   <string>Tailgater</string>
+  </void>
+  <void property="uscore">
+   <int>13</int>
+  </void>
+ </object>
+ <object class="Student2">
   <void property="uav">
    <string>logo</string>
   </void>
   <void property="udiff">
    <string>Medium</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
   </void>
   <void property="uname">
    <string>Old Main</string>
@@ -112,138 +84,40 @@
    <int>10</int>
   </void>
  </object>
- <object class="Student">
-  <void property="border">
-   <null/>
+ <object class="Student2">
+  <void property="uav">
+   <string>paw</string>
   </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
+  <void property="udiff">
+   <string>Hard</string>
   </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/logo.png</string>
-   </object>
+  <void property="uname">
+   <string>WE ARE</string>
   </void>
+  <void property="uscore">
+   <int>27</int>
+  </void>
+ </object>
+ <object class="Student2">
   <void property="uav">
    <string>logo</string>
   </void>
   <void property="udiff">
-   <string>Medium</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
+   <string>Hard</string>
   </void>
   <void property="uname">
-   <string>Old Main</string>
+   <string>Schenley</string>
   </void>
   <void property="uscore">
-   <int>10</int>
+   <int>23</int>
   </void>
  </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/logo.png</string>
-   </object>
-  </void>
-  <void property="uav">
-   <string>logo</string>
-  </void>
-  <void property="udiff">
-   <string>Medium</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
-  <void property="uname">
-   <string>Old Main</string>
-  </void>
-  <void property="uscore">
-   <int>10</int>
-  </void>
- </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/mascot.png</string>
-   </object>
-  </void>
+ <object class="Student2">
   <void property="uav">
    <string>mascot</string>
   </void>
   <void property="udiff">
    <string>Hard</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
-  <void property="uname">
-   <string>Bryce Jordan</string>
-  </void>
-  <void property="uscore">
-   <int>10</int>
-  </void>
- </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/mascot.png</string>
-   </object>
-  </void>
-  <void property="uav">
-   <string>mascot</string>
-  </void>
-  <void property="udiff">
-   <string>Hard</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
-  </void>
-  <void property="uname">
-   <string>Bryce Jordan</string>
-  </void>
-  <void property="uscore">
-   <int>10</int>
-  </void>
- </object>
- <object class="Student">
-  <void property="border">
-   <null/>
-  </void>
-  <void property="contentAreaFilled">
-   <boolean>false</boolean>
-  </void>
-  <void property="icon">
-   <object class="javax.swing.ImageIcon">
-    <string>images/mascot.png</string>
-   </object>
-  </void>
-  <void property="uav">
-   <string>mascot</string>
-  </void>
-  <void property="udiff">
-   <string>Hard</string>
-  </void>
-  <void property="ulength">
-   <string>1 minute</string>
   </void>
   <void property="uname">
    <string>Bryce Jordan</string>
